@@ -16,11 +16,6 @@ def detail(request, question_id):
 	return render(request, 'polls/detail.html', {
 		'question': question
 	})
-	# try:
-	# 	question = Question.objects.get(id=question_id)
-	# 	return HttpResponse('Estas viendo la pregunta numero {}\n\n{}'.format(question_id, question.question_text))
-	# except:
-	# 	return HttpResponse('ha ocurrido un error')
 
 def results(request, question_id):
 	return HttpResponse('Estas viendo los resultados de la pregunta numero {}'.format(question_id))
